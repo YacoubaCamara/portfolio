@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 
 function Messages() {
-  const adminKey = import.meta.env.VITE_ADMIN_KEY;
-  const hasMessagesAccess = Boolean(adminKey);
+  const hasMessagesAccess =
+    import.meta.env.VITE_HAS_MESSAGES_ACCESS === "true";
 
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -14,9 +14,9 @@ function Messages() {
 
     const loadMessages = async () => {
       try {
-        const response = await fetch("/.netlify/functions/contact", {
+        const response = await fetch("/.netlify/functions/messages", {
           headers: {
-            Authorization: `Bearer ${adminKey}`,
+            Authorization: `Bearer ${prompt("Enter admin key") || ""}`,
           },
         });
 
@@ -37,7 +37,7 @@ function Messages() {
     };
 
     loadMessages();
-  }, [adminKey, hasMessagesAccess]);
+  }, [hasMessagesAccess]);
 
   if (!hasMessagesAccess) {
     return <Navigate to="/" replace />;
@@ -60,17 +60,9 @@ function Messages() {
             {messages.map((msg) => (
               <div className="message-card" key={msg.id}>
                 <h4 className="message-subject">{msg.subject}</h4>
-
-                <p>
-                  <strong>Name:</strong> {msg.name}
-                </p>
-
-                <p>
-                  <strong>Email:</strong> {msg.email}
-                </p>
-
+                <p><strong>Name:</strong> {msg.name}</p>
+                <p><strong>Email:</strong> {msg.email}</p>
                 <div className="message-divider" />
-
                 <p className="message-body">{msg.message}</p>
               </div>
             ))}
