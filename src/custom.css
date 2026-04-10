@@ -1,0 +1,798 @@
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.custom-navbar {
+  background-color: #0d6efd;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+}
+
+.page-section h1 {
+  font-weight: 700;
+}
+
+.nav-link.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* LIGHT (default) */
+body[data-theme='light'] {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* DARK MODE */
+body[data-theme='dark'] {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body[data-theme='dark'] .custom-navbar {
+  background-color: #1f1f1f;
+}
+
+body[data-theme='dark'] .card {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.page-section .card,
+.card {
+  border: none;
+  border-radius: 12px;
+}
+
+/* SHARED CONTENT WIDTH */
+.layout-container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
+/* HERO */
+.hero {
+  min-height: 65vh;
+  background-image: url("https://images.unsplash.com/photo-1506260408121-e353d10b87c7?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  width: 100%;
+  min-height: 65vh;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 3rem 0;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.hero-text {
+  color: white;
+  font-family: Georgia, serif;
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.typing-line {
+  font-size: clamp(1.4rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: white;
+
+  display: inline;         
+  white-space: normal;   
+  word-break: break-word;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: white;
+  margin-left: 4px;
+  animation: blinkCursor 0.8s steps(1) infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
+}
+
+.hero-weather {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.weather-widget {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 1.4rem 1.6rem;
+  border-radius: 12px;
+  width: 220px;
+  max-width: 100%;
+  font-size: 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.weather-widget h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.weather-widget p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+/* ABOUT SECTION */
+.about-bottom {
+  background-color: #e9e9e9;
+  padding: 4rem 0 2rem;
+}
+
+.about-bottom-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.about-bottom-left {
+  flex: 2;
+  min-width: 0;
+}
+
+.about-bottom-left h2 {
+  font-family: "Courier New", monospace;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-bottom-left p {
+  font-family: "Courier New", monospace;
+  line-height: 1.7;
+}
+
+.about-bottom-left ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  font-family: "Courier New", monospace;
+}
+
+.about-bottom-left li {
+  margin-bottom: 0.6rem;
+}
+
+.about-bottom-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 180px;
+}
+
+.about-bottom-right h3 {
+  margin-bottom: 0.5rem;
+}
+
+.about-links {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ABOUT PAGE */
+.about-page {
+  background-color: #e9e9e9;
+  min-height: 100vh;
+  padding: 8rem 0 4rem;
+}
+
+.about-page-title {
+  font-family: "Courier New", monospace;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #212529;
+}
+
+.about-block {
+  margin-bottom: 3rem;
+}
+
+.about-block h3 {
+  font-family: "Courier New", monospace;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.about-block p {
+  font-family: "Courier New", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2b2b2b;
+  max-width: 900px;
+}
+
+.about-controls {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.about-input,
+.about-select {
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+}
+
+.about-input {
+  flex: 1;
+  min-width: 260px;
+}
+
+.about-select {
+  width: 220px;
+}
+
+.about-input:focus,
+.about-select:focus {
+  border-color: #999;
+}
+
+.about-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-skill-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.about-skill-card h5 {
+  font-family: "Courier New", monospace;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: #212529;
+}
+
+.about-skill-card p {
+  font-family: "Courier New", monospace;
+  font-size: 0.95rem;
+  margin: 0;
+  color: #666;
+}
+
+.about-no-results {
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* PROJECTS */
+.projects-page {
+  background-color: #e9e9e9;
+  min-height: 100vh;
+  padding: 8rem 0 4rem;
+}
+
+.projects-title {
+  font-family: "Courier New", monospace;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #212529;
+}
+
+.projects-status,
+.projects-error {
+  font-family: "Courier New", monospace;
+}
+
+.projects-error {
+  color: red;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.4rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-name {
+  font-family: "Courier New", monospace;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #212529;
+}
+
+.project-card p {
+  font-family: "Courier New", monospace;
+  font-size: 0.95rem;
+  margin: 0.4rem 0;
+  color: #333;
+}
+
+.project-description {
+  margin-top: 0.6rem;
+}
+
+.project-video {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* CONTACT */
+.contact-page {
+  background-color: #e9e9e9;
+  min-height: 100vh;
+  padding: 8rem 0 4rem;
+}
+
+.contact-page-title {
+  font-family: "Courier New", monospace;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #212529;
+}
+
+.contact-form {
+  max-width: 760px;
+}
+
+.contact-field {
+  margin-bottom: 1.5rem;
+}
+
+.contact-label {
+  display: block;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  color: #212529;
+}
+
+.contact-input {
+  width: 100%;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  padding: 0.95rem 1rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.contact-textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+.contact-input:focus {
+  border-color: #888;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.input-error {
+  border-color: #c0392b;
+}
+
+.contact-error-text {
+  margin-top: 0.45rem;
+  margin-bottom: 0;
+  font-family: "Courier New", monospace;
+  font-size: 0.92rem;
+  color: #c0392b;
+}
+
+.contact-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.contact-checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+.contact-checkbox-label {
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  color: #212529;
+}
+
+.contact-button {
+  margin-top: 1.25rem;
+  width: 100%;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: #212529;
+  color: white;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.contact-button:hover:enabled {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.contact-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.contact-server-message {
+  margin-top: 1rem;
+  font-family: "Courier New", monospace;
+  font-size: 0.98rem;
+}
+
+.contact-success {
+  color: #1e7e34;
+}
+
+.contact-failure {
+  color: #c0392b;
+}
+
+/* MESSAGES */
+.messages-page {
+  background-color: #e9e9e9;
+  min-height: 100vh;
+  padding: 8rem 0 4rem;
+}
+
+.messages-title {
+  font-family: "Courier New", monospace;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #212529;
+}
+
+.messages-status,
+.messages-empty,
+.messages-debug {
+  font-family: "Courier New", monospace;
+}
+
+.messages-error {
+  color: red;
+  font-family: "Courier New", monospace;
+}
+
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.message-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.message-subject {
+  font-family: "Courier New", monospace;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #212529;
+}
+
+.message-card p {
+  font-family: "Courier New", monospace;
+  font-size: 0.95rem;
+  margin: 0.4rem 0;
+  color: #333;
+}
+
+.message-date {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.message-divider {
+  margin: 0.8rem 0;
+  height: 1px;
+  background: #ddd;
+}
+
+.message-body {
+  margin-top: 0.5rem;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-weather {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .about-bottom-top {
+    flex-direction: column;
+  }
+
+  .about-bottom-right {
+    margin-left: 0;
+  }
+
+  .about-skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+/* @media (max-width: 768px) {
+  .layout-container {
+    width: 92%;
+  }
+
+  .navbar .layout-container {
+    display: block;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .navbar-collapse {
+    margin-top: 0.75rem;
+  }
+
+  .navbar-nav {
+    gap: 0.25rem;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-overlay {
+    min-height: auto;
+    padding: 2.5rem 0;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .typing-line {
+    min-height: auto;
+  }
+
+  .weather-widget {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .about-bottom {
+    padding: 3rem 0 2rem;
+  }
+
+  .about-page,
+  .projects-page,
+  .contact-page,
+  .messages-page {
+    padding: 6rem 0 3rem;
+  }
+
+  .about-page-title,
+  .projects-title,
+  .contact-page-title,
+  .messages-title {
+    font-size: 2.2rem;
+  }
+} */
+
+/* SMALL MOBILE */
+@media (max-width: 600px) {
+  .about-controls {
+    flex-direction: column;
+  }
+
+  .about-input,
+  .about-select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .about-skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.custom-header {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  background: #e9e9e9;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0.9rem 0;
+}
+
+.custom-header-wrap {
+  display: flex;
+  align-items: center;         
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 72px;
+}
+
+.custom-header-brand {
+  text-decoration: none;
+  color: #212529;
+  font-family: "Courier New", monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.custom-header-brand:hover {
+  color: #000;
+}
+
+.custom-header-collapse {
+  flex-grow: 1;
+}
+
+.custom-nav-links {
+  display: flex;
+  align-items: center;         
+  justify-content: flex-end;
+  gap: 1.2rem;
+  width: 100%;
+  font-family: "Courier New", monospace;
+}
+
+.custom-nav-link {
+  text-decoration: none;
+  color: rgba(30, 30, 30, 0.75);
+  font-size: 1.05rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.custom-nav-link:hover {
+  color: #000;
+}
+
+.custom-nav-link.active {
+  color: #000;
+  font-weight: 700;
+}
+
+.custom-nav-number {
+  margin-right: 0.3rem;
+}
+
+.custom-toggler {
+  margin-left: auto;
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.custom-toggler:focus {
+  box-shadow: none;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  filter: invert(0);
+}
+
+@media (max-width: 991.98px) {
+  .custom-header-wrap {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .custom-header-collapse {
+    width: 100%;
+    flex-basis: 100%;
+    margin-top: 0.75rem;
+  }
+
+  .custom-nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.85rem;
+  }
+
+  .custom-nav-link {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+.about-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-links a {
+  color: inherit;
+  text-decoration: none;
+}
