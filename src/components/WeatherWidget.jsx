@@ -1,66 +1,58 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
 function WeatherWidget() {
-  const [weather, setWeather] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
+  const [weather, setWeather] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    const apiKey = import.meta.env.VITE_WEATHER_API_KEY
-
-    if (!apiKey) {
-      setError('Missing OpenWeather API key.')
-      setLoading(false)
-      return
-    }
-
     if (!navigator.geolocation) {
-      setError('Geolocation is not supported by your browser.')
-      setLoading(false)
-      return
+      setError("Geolocation is not supported by your browser.");
+      setLoading(false);
+      return;
     }
 
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         try {
-          const { latitude, longitude } = position.coords
+          const { latitude, longitude } = position.coords;
 
-          const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
-
-          const response = await fetch(url)
+          const response = await fetch(
+            `/.netlify/functions/weather?lat=${latitude}&lon=${longitude}`
+          );
 
           if (!response.ok) {
-            throw new Error('Failed to fetch weather data.')
+            throw new Error("Failed to fetch weather data.");
           }
 
-          const data = await response.json()
+          const data = await response.json();
 
           setWeather({
             city: data.name,
             temp: data.main.temp,
             humidity: data.main.humidity,
-          })
+          });
         } catch (err) {
-          setError(err.message || 'Something went wrong while fetching weather.')
+          setError(err.message || "Something went wrong while fetching weather.");
         } finally {
-          setLoading(false)
+          setLoading(false);
         }
       },
       (geoError) => {
         if (geoError.code === 1) {
-          setError('Location permission was denied.')
+          setError("Location permission was denied.");
         } else {
-          setError('Unable to get your current location.')
+          setError("Unable to get your current location.");
         }
-        setLoading(false)
+        setLoading(false);
       },
       {
         enableHighAccuracy: true,
         timeout: 10000,
         maximumAge: 0,
       }
-    )
-  }, [])
+    );
+  }, []);
 
   return (
     <div className="weather-widget">
@@ -85,7 +77,7 @@ function WeatherWidget() {
         )}
       </div>
     </div>
-  )
+  );
 }
 
-export default WeatherWidget
+export default WeatherWidget;
