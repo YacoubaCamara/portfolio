@@ -1,24 +1,15 @@
 [
   {
     "id": 1,
-    "name": "deliciousss",
+    "name": "ShieldNet",
     "author": "Yacouba Camara",
-    "languages": ["React"],
-    "description": "Built a fully responsive single-page application (SPA) in React, implementing dynamic recipe search, filtering, and detail views with real-time Spoonacular API integration. Managed application state and side effects using React hooks (useState, useEffect) to fetch and render external data asynchronously. Implemented client-side routing with React Router for navigation between search results, cuisine categories, and individual recipe pages without page reloads.",
-    "github_repo":"https://github.com/YacoubaCamara/deliciousss",
-    "video": "/deliciousss_demo.mp4"
-  },
-  {
+    "languages": ["Python", "Docker", "Suricata"],
+    "description": "Built a hybrid IoT Network Intrusion Detection System combining Suricata signature-based detection and an Isolation Forest ML model to detect both known and novel network attacks. Simulated a 3-device IoT network using Docker containers, captured raw packets with tcpdump and tshark, and built a real-time security dashboard with Flask and WebSockets. Detected 205 anomalies out of 4089 packets during live ping flood attack simulation.",
+    "github_repo": "https://github.com/YacoubaCamara/ShieldNet",
+    "video": "/shieldnet_demo.mp4"
+},
+{
     "id": 2,
-    "name": "SupaMail",
-    "author": "Yacouba Camara",
-    "languages": ["PHP"],
-    "description": "Developed a secure, web application for managing emails, including features like user authentication, email sending, inbox management, and admin dashboard. Implemented and structured backend API endpoints to manage user authentication, email retrieval, and email sending functionalities with PHP for handling user input, email sending, and storing data in a MySQL database. Designed dynamic frontend forms and user flows for login, inbox viewing, and email composition, integrating the interface with backend operations.",
-    "github_repo":"https://github.com/YacoubaCamara/supamail",
-    "video": "/supamail_demo.mp4"
-  },
-  {
-    "id": 3,
     "name": "GeoLens NS",
     "author": "Yacouba Camara",
     "languages": ["JavaScript", "Next.js", "Node.js"],
@@ -28,12 +19,21 @@
     "video": "/geolens_demo.mp4"
   },
   {
-    "id": 4,
-    "name": "ShieldNet",
+    "id": 3,
+    "name": "deliciousss",
     "author": "Yacouba Camara",
-    "languages": ["Python", "Docker", "Suricata"],
-    "description": "Built a hybrid IoT Network Intrusion Detection System combining Suricata signature-based detection and an Isolation Forest ML model to detect both known and novel network attacks. Simulated a 3-device IoT network using Docker containers, captured raw packets with tcpdump and tshark, and built a real-time security dashboard with Flask and WebSockets. Detected 109 anomalies out of 2162 packets during live ping flood attack simulation.",
-    "github_repo": "https://github.com/YacoubaCamara/ShieldNet",
-    "video": "/shieldnet_demo.mp4"
-}
+    "languages": ["React"],
+    "description": "Built a fully responsive single-page application (SPA) in React, implementing dynamic recipe search, filtering, and detail views with real-time Spoonacular API integration. Managed application state and side effects using React hooks (useState, useEffect) to fetch and render external data asynchronously. Implemented client-side routing with React Router for navigation between search results, cuisine categories, and individual recipe pages without page reloads.",
+    "github_repo":"https://github.com/YacoubaCamara/deliciousss",
+    "video": "/deliciousss_demo.mp4"
+  },
+  {
+    "id": 4,
+    "name": "SupaMail",
+    "author": "Yacouba Camara",
+    "languages": ["PHP"],
+    "description": "Developed a secure, web application for managing emails, including features like user authentication, email sending, inbox management, and admin dashboard. Implemented and structured backend API endpoints to manage user authentication, email retrieval, and email sending functionalities with PHP for handling user input, email sending, and storing data in a MySQL database. Designed dynamic frontend forms and user flows for login, inbox viewing, and email composition, integrating the interface with backend operations.",
+    "github_repo":"https://github.com/YacoubaCamara/supamail",
+    "video": "/supamail_demo.mp4"
+  }
 ]
