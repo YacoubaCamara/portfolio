@@ -27,4 +27,13 @@
     "github_repo":"https://github.com/YacoubaCamara/geolens-ns",
     "video": "/geolens_demo.mp4"
   }
+  {
+    "id": 4,
+    "name": "ShieldNet",
+    "author": "Yacouba Camara",
+    "languages": ["Python", "Docker", "Suricata"],
+    "description": "Built a hybrid IoT Network Intrusion Detection System combining Suricata signature-based detection and an Isolation Forest ML model to detect both known and novel network attacks. Simulated a 3-device IoT network using Docker containers, captured raw packets with tcpdump and tshark, and built a real-time security dashboard with Flask and WebSockets. Detected 109 anomalies out of 2162 packets during live ping flood attack simulation.",
+    "github_repo": "https://github.com/YacoubaCamara/ShieldNet",
+    "video": "/shieldnet_demo.mp4"
+}
 ]
