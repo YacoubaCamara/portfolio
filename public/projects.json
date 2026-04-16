@@ -5,6 +5,7 @@
     "author": "Yacouba Camara",
     "languages": ["React"],
     "description": "Built a fully responsive single-page application (SPA) in React, implementing dynamic recipe search, filtering, and detail views with real-time Spoonacular API integration. Managed application state and side effects using React hooks (useState, useEffect) to fetch and render external data asynchronously. Implemented client-side routing with React Router for navigation between search results, cuisine categories, and individual recipe pages without page reloads.",
+    "github_repo":"https://github.com/YacoubaCamara/deliciousss",
     "video": "/deliciousss_demo.mp4"
   },
   {
@@ -13,6 +14,17 @@
     "author": "Yacouba Camara",
     "languages": ["PHP"],
     "description": "Developed a secure, web application for managing emails, including features like user authentication, email sending, inbox management, and admin dashboard. Implemented and structured backend API endpoints to manage user authentication, email retrieval, and email sending functionalities with PHP for handling user input, email sending, and storing data in a MySQL database. Designed dynamic frontend forms and user flows for login, inbox viewing, and email composition, integrating the interface with backend operations.",
+    "github_repo":"https://github.com/YacoubaCamara/supamail",
     "video": "/supamail_demo.mp4"
+  },
+  {
+    "id": 3,
+    "name": "GeoLens NS",
+    "author": "Yacouba Camara",
+    "languages": ["JavaScript", "Next.js", "Node.js"],
+    "description": "AI-powered geoscience assistant for Nova Scotia. Built a full-stack RAG web app that lets users query government geoscience reports in plain English using Claude AI and semantic vector search. Features an interactive mineral map of Nova Scotia with color-coded markers connected to the AI chatbot via a unified explore, ask flow. Deployed live on Vercel.",
+    "link": "https://geolens-ns.vercel.app/",
+    "github_repo":"https://github.com/YacoubaCamara/geolens-ns",
+    "video": "/geolens_demo.mp4"
   }
 ]
