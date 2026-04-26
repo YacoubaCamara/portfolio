@@ -64,6 +64,13 @@ function Projects() {
                     Your browser does not support the video tag.
                   </video>
                 )}
+                {project.image && (
+                  <img
+                    className="project-video"
+                    src={project.image}
+                    alt={`Preview for ${project.name}`}
+                  />
+                )}
 
                 <p className="project-description">{project.description}</p>
 
