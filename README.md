@@ -2,7 +2,7 @@
 
 * *Date Created*: 08 04 2026
 * *Last Modification Date*: 10 04 2026
-* *Lab Netlify URL*: https://portfolio-yacouba-app-react.netlify.app/
+* *Lab Netlify URL*: https://www.yacoubacamara.com/
 * *Lab Gitlab URL*: https://git.cs.dal.ca/ycamara/csci3172.git
 * *Lab GitHub URL*: https://github.com/YacoubaCamara/portfolio.git
 
