@@ -1,6 +1,15 @@
 [
   {
-    "id": 1,
+  "id": 1,
+  "name": "brain-age-prediction-eeg",
+  "author": "Yacouba Camara",
+  "languages": ["Python", "scikit-learn", "XGBoost", "SciPy"],
+  "description": "Built a machine learning pipeline that analyzes resting-state EEG brain signals and predicts a person's age from their brain activity patterns. Extracted frequency band power features across delta, theta, alpha, beta, and gamma bands using Welch's method. Trained and compared 5 models including Random Forest and Gradient Boosting using Leave-One-Out cross-validation across 126 subjects aged 18–89. Random Forest achieved the best performance with an MAE of 15.11 years.",
+  "github_repo": "https://github.com/YacoubaCamara/brain-age-prediction-eeg",
+  "images": ["/model_comparison.png", "/brain_age_gap.png", "/feature_importance.png"]
+},
+  {
+    "id": 2,
     "name": "ShieldNet",
     "author": "Yacouba Camara",
     "languages": ["Python", "Docker", "Suricata"],
@@ -9,7 +18,7 @@
     "video": "/shieldnet_demo.mp4"
 },
 {
-    "id": 2,
+    "id": 3,
     "name": "GeoLens NS",
     "author": "Yacouba Camara",
     "languages": ["JavaScript", "Next.js", "Node.js"],
@@ -19,7 +28,7 @@
     "video": "/geolens_demo.mp4"
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "deliciousss",
     "author": "Yacouba Camara",
     "languages": ["React"],
@@ -28,21 +37,12 @@
     "video": "/deliciousss_demo.mp4"
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "SupaMail",
     "author": "Yacouba Camara",
     "languages": ["PHP"],
     "description": "Developed a secure, web application for managing emails, including features like user authentication, email sending, inbox management, and admin dashboard. Implemented and structured backend API endpoints to manage user authentication, email retrieval, and email sending functionalities with PHP for handling user input, email sending, and storing data in a MySQL database. Designed dynamic frontend forms and user flows for login, inbox viewing, and email composition, integrating the interface with backend operations.",
     "github_repo":"https://github.com/YacoubaCamara/supamail",
     "video": "/supamail_demo.mp4"
-  },
-  {
-  "id": 5,
-  "name": "brain-age-prediction-eeg",
-  "author": "Yacouba Camara",
-  "languages": ["Python", "scikit-learn", "XGBoost", "SciPy"],
-  "description": "Built a machine learning pipeline that analyzes resting-state EEG brain signals and predicts a person's age from their brain activity patterns. Extracted frequency band power features across delta, theta, alpha, beta, and gamma bands using Welch's method. Trained and compared 5 models including Random Forest and Gradient Boosting using Leave-One-Out cross-validation across 126 subjects aged 18–89. Random Forest achieved the best performance with an MAE of 15.11 years.",
-  "github_repo": "https://github.com/YacoubaCamara/brain-age-prediction-eeg",
-  "image": "/brain_age_gap.png"
-}
+  }
 ]

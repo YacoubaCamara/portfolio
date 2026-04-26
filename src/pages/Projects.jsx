@@ -64,12 +64,17 @@ function Projects() {
                     Your browser does not support the video tag.
                   </video>
                 )}
-                {project.image && (
-                  <img
-                    className="project-video"
-                    src={project.image}
-                    alt={`Preview for ${project.name}`}
-                  />
+                {project.images && (
+                  <div className="project-images">
+                    {project.images.map((img, i) => (
+                      <img
+                        key={i}
+                        src={img}
+                        alt={`Preview ${i + 1} for ${project.name}`}
+                        className="project-image"
+                      />
+                    ))}
+                  </div>
                 )}
 
                 <p className="project-description">{project.description}</p>
