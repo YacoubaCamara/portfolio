@@ -2,19 +2,39 @@ import { useState } from "react";
 
 function About() {
   const skills = [
-    { name: "React", category: "Frontend" },
-    { name: "JavaScript", category: "Frontend" },
-    { name: "HTML", category: "Frontend" },
-    { name: "CSS", category: "Frontend" },
-    { name: "Bootstrap", category: "Frontend" },
-    { name: "Java", category: "Programming" },
-    { name: "Python", category: "Programming" },
-    { name: "Firebase", category: "Backend" },
-    { name: "REST APIs", category: "Backend" },
-    { name: "Git", category: "Tools" },
-    { name: "GitHub", category: "Tools" },
-    { name: "VS Code", category: "Tools" },
-  ];
+  { name: "JavaScript", category: "Languages" },
+  { name: "Python", category: "Languages" },
+  { name: "Java", category: "Languages" },
+  { name: "PHP", category: "Languages" },
+  { name: "C++", category: "Languages" },
+  { name: "SQL", category: "Languages" },
+
+  { name: "React", category: "Frameworks & Libraries" },
+  { name: "Next.js", category: "Frameworks & Libraries" },
+  { name: "Node.js", category: "Frameworks & Libraries" },
+  { name: "Express.js", category: "Frameworks & Libraries" },
+  { name: "Leaflet.js", category: "Frameworks & Libraries" },
+  { name: "Bootstrap", category: "Frameworks & Libraries" },
+
+  { name: "Claude AI", category: "AI & Data" },
+  { name: "RAG pipelines", category: "AI & Data" },
+  { name: "pgvector", category: "AI & Data" },
+  { name: "Supabase", category: "AI & Data" },
+  { name: "Voyage AI", category: "AI & Data" },
+  { name: "MongoDB", category: "AI & Data" },
+  { name: "MySQL", category: "AI & Data" },
+
+  { name: "Git", category: "Tools" },
+  { name: "GitHub", category: "Tools" },
+  { name: "Vercel", category: "Tools" },
+  { name: "Postman", category: "Tools" },
+  { name: "VS Code", category: "Tools" },
+  { name: "Wireshark", category: "Tools" },
+  { name: "Docker", category: "Tools" },
+  { name: "Suricata", category: "Tools" },
+  { name: "IntelliJ", category: "Tools" },
+
+];
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
